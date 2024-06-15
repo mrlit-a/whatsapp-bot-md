@@ -5,8 +5,7 @@ const path = require('path')
 const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
-const DATABASE_URL =
-  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+const DATABASE_URL = 'postgres://ggg_lv7n_user:PifkjZv5GYt94cimcTFCv12LfPQLvuYn@dpg-cpak4blds78s73d38aig-a.ohio-postgres.render.com/ggg_lv7n'
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
